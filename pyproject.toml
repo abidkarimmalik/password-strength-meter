@@ -1,7 +1,11 @@
 [project]
-name = "password-srength-meter"
+name = "password-strength-meter"  # Fixed typo
 version = "0.1.0"
-description = "Add your description here"
+description = "A Streamlit app to check password strength"
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = []
+requires-python = ">=3.8"  # Compatible with Python 3.12 (Streamlit's environment)
+dependencies = [
+    "streamlit>=1.32",  # Mandatory for Streamlit apps
+    "zxcvbn>=4.4.28",   # Common password-strength library
+    "rich>=13.0"        # Already in your logs
+]
